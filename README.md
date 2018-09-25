@@ -1,2 +1,2 @@
-# Groundwater_Quality_GACapstone
+# Groundwater Quality GACapstone
 Capstone Project for General Assembly. Investigation of California groundwater quality and drinking water.
