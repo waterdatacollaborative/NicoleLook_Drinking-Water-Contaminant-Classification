@@ -7,6 +7,8 @@ Contamination of the state’s groundwater resources results in higher costs for
 
 Due to the enormity of the data available, the scope of this project was selected to pertain to samples collected from Kern County from 2012 - present. This is a follow up to a [legislative report](https://www.waterboards.ca.gov/water_issues/programs/gama/ab2222/docs/ab2222.pdf) published in 2013 about communities in California that rely on contaminated groundwater as a water source, identifying Kern County as having the most community water systems that are 100% reliant on groundwater. 
 
+![gw reliant counties](Groundwater_Quality_GACapstone/assets/Visuals/AB2222 Counties Reliant on GW.png)
+
 It is the aim of this project to build a classification model to quantify the association between groundwater monitoring results from the Groundwater Ambient Monitoring and Assessment (GAMA) and the California Dept of Public Health’s drinking water quality results (DDW). For a classification model, the confusion matrix metric will be used to evaluate the model’s performance. Since detection of contamination in a system’s supply is a matter of public health, optimization should be geared towards sensitivity, the rate of true positives. 
 
 ## Data Collection
@@ -23,10 +25,11 @@ Once each individual dataset were cleaned of structural errors and irrelevant in
 The DDW strongly cautions users to use care when interpreting data made available, as the presence of a contaminant in raw water at a given concentration does not necessarily mean that the water was served by the water system to its customers, or, if served, that the contaminant was present at that concentration. However, in the interest of time and simplicity, any result over a chemical’s established maximum contaminant level (MCL) was considered to be a positive class.
 
 
-Kern County and its 263 water systems
+**Kern County and its 263 water systems**
+![Kern sys](Groundwater_Quality_GACapstone/assets/Visuals/Kern system.png)
 
-Groundwater contaminants over time
-
+**Groundwater contaminants over time**
+![gw contaminants](Groundwater_Quality_GACapstone/assets/Visuals/groundwater princip contaminants.png)
 
 <<Add Drinking Water Over MCL Detections Here>>
 
@@ -46,6 +49,9 @@ The Decision Tree Classifier with all default settings performed with a training
 
 The Random Forest Classifier with all default settings performed with a training accuracy between 78.1% - 98.8% and a testing accuracy between 79.7% - 99.0%. Which is nearly identical to the performance of a single Decision Tree. There is less evidence of overfitting due to the training accuracy being slightly higher than the testing accuracy. However, the confusion matrix also shows that these Random Forest Classifier models also suffer from low true positive rates and not-negligible false negative rates.
 The Logistic Regression Classifier with all default settings performed with a training accuracy in the high 70 percentage for Arsenic while all the other chemicals were in the high 90 percentage. This follows the same ranges as the Decision Tree and Random Forest models previous. There is less evidence here of overfitting due to the training accuracy being nearly identical to the testing accuracy. However, it performed the worst of the models in terms of precision for Arsenic, the least imbalanced class.
+
+**Logistic Regression Beta Coefficients**
+![beta coefs](Groundwater_Quality_GACapstone/assets/Visuals/log reg beta coefficients.png)
 
 The table above is of the Beta Coefficients for each groundwater chemical measurement to drinking water detection over MCL. What is most notable is that for each one microgram per Liter increase of gross alpha counts of radionuclides in groundwater there is a 0.0078 pCi/L fo Uranium in the nearest drinking water well station. There is also a 0.0077 increase in units of another method of measuring Uranium in the drinking water for a unit increase Uranium detected in the groundwater. The Beta coefficients are so miniscule as to nearly be negligent or too small to be considered within significant figures.
 
