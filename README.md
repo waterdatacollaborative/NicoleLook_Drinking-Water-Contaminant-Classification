@@ -1,11 +1,10 @@
 # Technical Report - Drinking Supply Water Contamination Classification
----
 
 The California Dept of Public Health estimates that 85 percent of California’s community public water systems, supplying more than 30 million residents, rely on groundwater for at least part of their drinking water supply. Because many community water systems are entirely reliant on groundwater for their drinking water supply, contamination of this resource can have  far-reaching consequences. Many groundwater basins throughout California are contaminated with either naturally occurring or anthropogenic pollutants, or both. When a groundwater source is contaminated, community water systems must use costly treatment systems to ensure that the water is safe to drink. Where treatment and alternative water supplies are not available, some community water systems serve contaminated groundwater until a solution is implemented. 
 Contamination of the state’s groundwater resources results in higher costs for ratepayers and consumers due to the necessity of additional treatment and can pose a threat to public health for community water systems that cannot afford the necessary treatment systems. The identification of a relationship between ambient groundwater quality and community water systems that rely on a given groundwater source may help focus available efforts and resources to ensure the provision of safe drinking water.
 
 ## Problem Statement
----
+
 Due to the enormity of the data available, the scope of this project was selected to pertain to samples collected from Kern County from 2012 - present. This is a follow up to a [legislative report](https://www.waterboards.ca.gov/water_issues/programs/gama/ab2222/docs/ab2222.pdf) published in 2013 about communities in California that rely on contaminated groundwater as a water source, identifying Kern County as having the most community water systems that are 100% reliant on groundwater. 
 
 It is the aim of this project to build a classification model to quantify the association between groundwater monitoring results from the Groundwater Ambient Monitoring and Assessment (GAMA) and the California Dept of Public Health’s drinking water quality results (DDW). For a classification model, the confusion matrix metric will be used to evaluate the model’s performance. Since detection of contamination in a system’s supply is a matter of public health, optimization should be geared towards sensitivity, the rate of true positives. 
